@@ -12,7 +12,9 @@ Credits
 -------
 
 Maintained by [Tzente S.r.l.](http://tzente.com/).
+
 A tool for [jAPS 2.0 entando](http://www.japsportal.com)
 
 (c) 2011 by Tzente S.r.l.
+
 See LICENSE.txt for license.
