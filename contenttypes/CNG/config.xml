@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns		= "http://www.w3.org/ns/widgets"
+	xml:lang		= "en"
+	xmlns:sha		= "http://dev.japsportal.org/ns/sharando"
+	id				= "org.entando.sharando.contenttypes.CNG"
+	version 		= "1.0.0">
+
+	<name short="CNG">Generic Content</name>
+	<name short="CNG" xml:lang="it">Contenuto Generico</name>
+
+	<description>
+		Suitable for the typical story telling
+	</description>
+	
+	<description xml:lang="it">
+		Versatile, adatto come Tipo di Contenuto di base per ogni evenienza
+	</description>
+
+	<author href="http://www.tzente.com" email="info@tzente.com">
+		Tzente s.r.l.
+	</author>
+
+	<icon src="preview/small.png" width="100" height="100" />
+	<icon src="preview/full.png" width="300" height="300" />
+
+	<feature name="entando">
+		<param name="version" value=">=2.2.0"/> 	
+	</feature>
+
+	<feature name="markup">
+		<param name="version" value="HTML5"/> 	
+	</feature>
+	
+	<sha:resources>
+		<sha:resource path="CNG.xml" />
+		<sha:resource path="contentmodels/default.vm" />
+		<sha:resource path="contentmodels/frontstory.vm" />
+		<sha:resource path="contentmodels/list.vm" />				
+	</sha:resources>
+
+	<license href="http://www.gnu.org/licenses/gpl-2.0.txt">
+		GNU GENERAL PUBLIC LICENSE Version 2, June 1991
+	</license>	
+	
+</widget>

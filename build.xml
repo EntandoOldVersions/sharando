@@ -1,0 +1,10 @@
+<project name="sharando" default="about" basedir=".">
+	<description>sharando - sharing resources aroung jAPS 2.0 entando</description>
+	<target name="about" description="Show some general informations">
+		<echo message="Something will come..." />
+	</target>
+	<target name="new-content-type" description="Interactively build the skeleton for a new Content Type in sharando">
+		<ant antfile="build.xml" dir="${basedir}/contenttypes" />
+	</target>	
+	
+</project>

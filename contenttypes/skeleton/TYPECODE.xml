@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contenttype typecode="@contenttype.short@" typedescr="@contenttype.full@" viewpage="homepage" listmodel="11" defaultmodel="1">
+	<attributes>
+		<attribute name="Title" attributetype="Text" searcheable="true" indexingtype="TEXT" />
+	</attributes>
+</contenttype>

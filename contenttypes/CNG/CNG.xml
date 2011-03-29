@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contenttype typecode="CNG" typedescr="Generic Content" viewpage="content_view" listmodel="11" defaultmodel="1">
+	<attributes>
+		<attribute name="Title" attributetype="Text" searcheable="true" indexingtype="TEXT">
+			<validations>
+				<required>true</required>
+				<minlength>1</minlength>
+			</validations>
+			<roles>
+				<role>jacms:title</role>
+			</roles>
+		</attribute>
+		<attribute name="Subtitle" attributetype="Text" indexingtype="TEXT" />
+		<attribute name="Abstract" attributetype="Hypertext" indexingtype="TEXT" />
+		<attribute name="Text" attributetype="Hypertext" indexingtype="TEXT" />
+		<attribute name="Image_1" attributetype="Image" />
+		<attribute name="Image_2" attributetype="Image" />
+		<list name="Links" attributetype="Monolist">
+			<nestedtype>
+				<attribute name="Links" attributetype="Link" indexingtype="TEXT" />
+			</nestedtype>
+		</list>
+		<list name="Attaches" attributetype="Monolist">
+			<nestedtype>
+				<attribute name="Attaches" attributetype="Attach" indexingtype="TEXT" />
+			</nestedtype>
+		</list>
+	</attributes>
+</contenttype>

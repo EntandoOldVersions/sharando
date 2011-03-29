@@ -1,0 +1,40 @@
+<!-- ### Full - Image Right ### -->
+<article>
+<header>
+<h3>$content.Title.text</h3>
+#if($content.Subtitle.text != "")
+<h4>$content.Subtitle.text</h4>
+#end
+</header>
+#if ( $content.Text.text != "" )
+$content.Text.getTextBeforeImage(0)
+#if ( $content.Image_1.imagePath("3") != "" )
+<a href="$content.Image_1.imagePath("0")"><img src="$content.Image_1.imagePath("3")" alt="$content.Image_1.text" class="right" /></a>
+#end 
+$content.Text.getTextByRange(0,60)
+#if ( $content.Image_2.imagePath("2") != "" )
+<a href="$content.Image_2.imagePath("0")"><img src="$content.Image_2.imagePath("2")" alt="$content.Image_2.text" class="left" /></a>
+#end
+$content.Text.getTextAfterImage(60)
+#end
+#if ( ($content.Attaches && $content.Attaches.size() > 0) || ($content.Links && $content.Links.size() > 0) )
+<aside>
+#if ($content.Attaches && $content.Attaches.size() > 0)
+<h4 class="clear">$i18n.getLabel('ATTACHES')</h4>
+	<ul>
+		#foreach ($attach in $content.Attaches)
+		<li><a href="$attach.attachPath">$attach.text</a></li>
+		#end	
+	</ul>
+#end
+#if ($content.Links && $content.Links.size() > 0)
+<h4 class="clear">$i18n.getLabel('LINKS')</h4>
+	<ul>
+		#foreach ($link in $content.Links)
+		<li><a href="$link.destination">$link.text</a></li>
+		#end	
+	</ul>
+#end
+</aside>
+#end
+</article>

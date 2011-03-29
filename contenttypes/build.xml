@@ -1,0 +1,43 @@
+<project name="sharando-contenttypes" default="new-content-type" basedir=".">
+	<description>contenttypes @ sharando - sharing resources aroung jAPS 2.0 entando</description>
+	<target name="new-content-type" description="Interactively build the skeleton for a new Content Type in sharando">
+		<echo message="Starting the wizard..." />
+
+		<input>
+Wizard started.
+			
+Will now ask you some questions about the Content Type we are about to add to sharando.
+			
+Press enter to continue...
+		</input>
+
+		<input message="Enter a short name (aka typecode). Three uppercase letters. Please check for and avoid codes already present in sharando/contenttypes" addproperty="contenttype.short" />
+		<condition property="contenttype.short.legal.three">
+			<matches pattern="^[A-Z][A-Z][A-Z]$" string="${contenttype.short}" />
+		</condition>
+		<fail message="The short name you provided is not three uppercase letters" unless="contenttype.short.legal.three" />
+		<condition property="contenttype.short.legal.new">
+			<not>
+				<resourceexists>
+					<file file="${basedir}/${contenttype.short}" />
+				</resourceexists>
+			</not>				
+		</condition>
+		<fail message="The short name you provided already exists" unless="contenttype.short.legal.new" />		
+
+		<input message="Enter a full name (aka typedescr) in English." addproperty="contenttype.full" />
+	
+		<mkdir dir="${basedir}/${contenttype.short}" />
+
+		<copy todir="${basedir}/${contenttype.short}" filtering="true">
+			<filterset>
+				<filter token="contenttype.short" value="${contenttype.short}" />
+				<filter token="contenttype.full" value="${contenttype.full}" />				
+			</filterset>
+			<fileset dir="${basedir}/skeleton">
+				<include name="**/*"/>
+			</fileset>			
+		</copy>
+		<move file="${basedir}/${contenttype.short}/TYPECODE.xml" tofile="${basedir}/${contenttype.short}/${contenttype.short}.xml" />
+	</target>
+</project>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns		= "http://www.w3.org/ns/widgets"
+	xml:lang		= "en"
+	xmlns:sha		= "http://dev.japsportal.org/ns/sharando"
+	id				= "org.entando.sharando.contenttypes.@contenttype.short@"
+	version 		= "1.0.0">
+
+	<name short="@contenttype.short@">@contenttype.full@</name>
+	<!--
+	<name short="@contenttype.short@" xml:lang="it">Nome completo</name>
+ 	-->
+ 	
+ 	<!--
+	<description>
+		Suitable for the foo bar story
+	</description>
+	-->
+	
+	<!--
+	<description xml:lang="it">
+		Adatto per questo e quell'altro
+	</description>
+	-->
+	
+	<!--
+	<author href="http://www.example.com" email="john@example.com">
+		John Doe
+	</author>
+	-->
+
+	<!--
+	<icon src="preview/small.png" width="100" height="100" />
+	<icon src="preview/full.png" width="300" height="300" />
+	-->
+
+	<!--
+	<feature name="entando">
+		<param name="version" value=">=2.2.0"/> 	
+	</feature>
+	-->
+
+	<!--
+	<feature name="markup">
+		<param name="version" value="HTML5"/> 	
+	</feature>
+	-->
+		
+	<sha:resources>
+		<sha:resource path="@contenttype.short@.xml" />
+		<sha:resource path="contentmodels/default.vm" />
+		<sha:resource path="contentmodels/list.vm" />
+		<!--				
+		<sha:resource path="contentmodels/anotherone.vm" />
+		<sha:resource path="contentmodels/css/anotherone.css" />
+		<sha:resource path="contentmodels/img/anotherone-background-pattern.png" />
+		-->
+	</sha:resources>
+
+	<license href="http://www.gnu.org/licenses/gpl-2.0.txt">
+		GNU GENERAL PUBLIC LICENSE Version 2, June 1991
+	</license>	
+	
+</widget>

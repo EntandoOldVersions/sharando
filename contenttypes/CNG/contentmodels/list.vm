@@ -1,0 +1,11 @@
+<!-- ### Lists - Search Result ### -->
+<article>
+<h4><a class="noborder" href="$content.contentLink">$content.Title.text</a></h4>
+#if ($content.Abstract.text != "")
+  $content.Abstract.getTextBeforeImage(0)
+#if ( $content.Image_1.imagePath("1") != "" )
+<a class="noborder" href="$content.Image_1.imagePath("0")"><img src="$content.Image_1.imagePath("1")" alt="$content.Image_1.text" class="left" /></a>
+#end
+  $content.Abstract.getTextAfterImage(0)
+#end
+</article>
