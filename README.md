@@ -8,6 +8,11 @@ sharando is an experiment born with the hope of making it easier to share resour
 
 [Source code](http://github.com/entando/sharando/archives/master) and [issue tracking](http://github.com/entando/sharando/issues) are available on github.
 
+Changelog (short)
+-----------------
+
+- 2011-03-29 Started with Content Types
+
 Credits
 -------
 
