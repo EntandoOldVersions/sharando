@@ -1,0 +1,5 @@
+<!-- ### Example: Lists - Date, Title and Abstract ### -->
+<h3><a href="$content.contentLink">$content.Date.getFormattedDate("dd/MM/yyyy") &mdash; $content.Title.text</a></h3>
+#if ($content.Abstract.text != "")
+<p>$content.Abstract.text</p>
+#end

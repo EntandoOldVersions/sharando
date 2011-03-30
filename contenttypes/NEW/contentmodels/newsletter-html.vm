@@ -1,0 +1,6 @@
+<!-- ### For Newsletters - HTML ### -->
+<h3><a href="$content.contentLink">$content.Title.text</a></h3>
+#if ($content.Date.fullDate != "")<p>Published on: $content.Date.fullDate</p>#end
+#if ($content.Story.text != "")
+<p>$content.Story.text</p>
+#end

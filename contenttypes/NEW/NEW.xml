@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contenttype typecode="NEW" typedescr="Notizia" viewpage="newsview" listmodel="11" defaultmodel="1">
+	<attributes>
+		<attribute name="Date" attributetype="Date" searcheable="true" required="true" />
+		<attribute name="Title" attributetype="Text" searcheable="true" required="true" indexingtype="text" />
+		<attribute name="Abstract" attributetype="Longtext" indexingtype="text" />
+		<attribute name="Story" attributetype="Hypertext" indexingtype="text" />
+		<attribute name="Image_1" attributetype="Image" />
+		<list name="Sources" attributetype="Monolist" nestedtype="Link" />
+		<list name="Attaches" attributetype="Monolist" nestedtype="Attach" />
+	</attributes>
+</contenttype>

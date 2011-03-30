@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns		= "http://www.w3.org/ns/widgets"
+	xml:lang		= "en"
+	xmlns:sha		= "http://dev.japsportal.org/ns/sharando"
+	id				= "org.entando.sharando.contenttypes.NEW"
+	version 		= "1.0.0">
+
+	<name short="NEW">News Story</name>
+	<name short="NEW" xml:lang="it">Notizia</name>
+ 	
+	<description>
+		The typical newspaper-like story
+	</description>
+	
+	<description xml:lang="it">
+		Tipica notizia stile giornale
+	</description>
+	
+	<author href="http://www.tzente.it/" email="w.ghelfi@tzente.it">
+		William Ghelfi
+	</author>
+
+	<!--
+	<icon src="preview/small.png" width="100" height="100" />
+	<icon src="preview/full.png" width="300" height="300" />
+	-->
+
+	<feature name="entando">
+		<param name="version" value=">=2.2.0"/> 	
+	</feature>
+
+	<feature name="markup">
+		<param name="version" value="XHTML"/> 	
+	</feature>
+		
+	<sha:resources>
+		<sha:resource path="NEW.xml" />
+		<sha:resource path="contentmodels/default.vm" />
+		<sha:resource path="contentmodels/list.vm" />
+		<sha:resource path="contentmodels/newsletter-html.vm" />
+		<!--				
+		<sha:resource path="contentmodels/css/anotherone.css" />
+		<sha:resource path="contentmodels/img/anotherone-background-pattern.png" />
+		-->
+	</sha:resources>
+
+	<license href="http://www.gnu.org/licenses/gpl-2.0.txt">
+		GNU GENERAL PUBLIC LICENSE Version 2, June 1991
+	</license>	
+	
+</widget>
